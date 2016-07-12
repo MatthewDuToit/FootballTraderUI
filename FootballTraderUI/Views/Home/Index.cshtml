@@ -1,0 +1,31 @@
+﻿@using System.Configuration
+@using FootballTraderUI.Helpers
+@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/inplaytradertools.css"/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <script data-main="../../scripts/main" src="../../scripts/lib/require.js"></script>
+    <script src="../../scripts/lib/jquery-1.10.2.min.js"></script>
+    <script src="../../scripts/lib/bootstrap.min.js"></script>
+    <script src="../../scripts/lib/bootstrap-switch.js"></script>
+    <script src="../../scripts/lib/dot.js"></script>
+    
+</head>
+
+<body>
+    <div id="Fixtures">
+        <div id="FixtureFilterContainer"></div>
+        <script src="../../Scripts/Components/Filter/Dropdown.js"></script>
+    </div>
+</body>
+</html>
