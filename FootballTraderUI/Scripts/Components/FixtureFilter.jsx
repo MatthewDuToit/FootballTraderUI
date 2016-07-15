@@ -11,7 +11,8 @@
     "jsx!../Components/Filter/SelectAll",
     "jsx!../Components/Filter/TraderItem",
     "jsx!../Components/Filter/TradingStateItem"],
-    function(React, $, math, storage, api, globals, eventBus, constants, traderStore, TraderDropdownSelectedText, SelectAll, TraderItem, TradingStateItem) {
+    function (React, $, math, storage, api, globals, eventBus, constants, traderStore,
+        TraderDropdownSelectedText, SelectAll, TraderItem, TradingStateItem) {
         function interceptEvent(event) {
             if (event) {
                 event.preventDefault();
@@ -108,11 +109,6 @@
                     tradingStatesTemp[flagValue].isSelected = !tradingStatesTemp[flagValue].isSelected;
 
                     var tradingStateFlagTemp = self.state.tradingStateFlag;
-
-                    console.log("after");
-                    console.log(tradingStateFlagTemp);
-
-                    console.log(typeof (tradingStateFlagTemp));
 
                     if (tradingStatesTemp[flagValue].isSelected) {
                         tradingStateFlagTemp += flagValue;

@@ -173,10 +173,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\Components\Filter\SelectAll.jsx" />
-    <Content Include="Scripts\Components\Filter\TraderDropdownSelectedText - Copy %282%29.jsx" />
-    <Content Include="Scripts\Components\Filter\TraderDropdownSelectedText - Copy %283%29.jsx" />
-    <Content Include="Scripts\Components\Filter\TraderDropdownSelectedText - Copy %284%29.jsx" />
-    <Content Include="Scripts\Components\Filter\TraderDropdownSelectedText - Copy %285%29.jsx" />
     <Content Include="Scripts\Components\Filter\TradingStateItem.jsx" />
     <Content Include="Scripts\Components\Filter\TraderItem.jsx" />
     <None Include="Scripts\Components\FixtureFilter.jsx" />
