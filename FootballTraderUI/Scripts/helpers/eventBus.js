@@ -1,8 +1,5 @@
 ﻿define(['underscore', 'eventEmitter', '../enums/constants'],
     function (_, eventEmitter, constants) {
-
-
-
         var subscribe = function (eventId, func) {
             eventEmitter.subscribe(eventId, func);
         }

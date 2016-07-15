@@ -1,0 +1,1 @@
+﻿var _apiRootUrl = "http://localhost/IPAFootballRestService";

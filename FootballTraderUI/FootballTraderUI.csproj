@@ -158,6 +158,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Content\inplaytradertools.css" />
     <None Include="Scripts\Components\Filter\Dropdown.jsx" />
+    <Content Include="Scripts\App\api-root-url.js" />
+    <Content Include="Scripts\App\api.js" />
+    <Content Include="Scripts\App\globals.js" />
+    <Content Include="Scripts\App\storage.js" />
     <Content Include="Scripts\Components\Filter\Dropdown.js" />
     <Content Include="Scripts\Components\Filter\Test.jsx" />
     <None Include="Scripts\Components\Filter\TradingState.jsx" />
@@ -174,13 +178,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\Components\Filter\FixtureFilter.jsx" />
-    <Content Include="Scripts\actions\stubs\data\traderList.js" />
-    <Content Include="Scripts\actions\stubs\traderStore.js" />
+    <Content Include="Scripts\Actions\stubs\data\traderList.js" />
+    <Content Include="Scripts\Actions\stubs\traderStore.js" />
     <Content Include="Scripts\config.js" />
-    <Content Include="Scripts\enums\constants.js" />
-    <Content Include="Scripts\enums\enums.js" />
+    <Content Include="Scripts\Enums\constants.js" />
+    <Content Include="Scripts\Enums\enums.js" />
     <Content Include="Scripts\ErrorMessage.js" />
-    <Content Include="Scripts\helpers\eventBus.js" />
+    <Content Include="Scripts\Helpers\eventBus.js" />
     <Content Include="Scripts\lib\at_intervals.js" />
     <Content Include="Scripts\lib\backbone-min.js" />
     <Content Include="Scripts\lib\bootbox.js" />
@@ -203,6 +207,7 @@
     <Content Include="Scripts\lib\jsx.js" />
     <Content Include="Scripts\lib\JSXTransformer-0.13.1.js" />
     <Content Include="Scripts\lib\JSXTransformer.js" />
+    <Content Include="Scripts\lib\math.js" />
     <Content Include="Scripts\lib\modernizr-2.6.2.js" />
     <Content Include="Scripts\lib\moment.js" />
     <Content Include="Scripts\lib\r.js" />
