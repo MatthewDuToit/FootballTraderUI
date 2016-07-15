@@ -157,15 +157,10 @@
     <Compile Include="Helpers\URLHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Content\inplaytradertools.css" />
-    <None Include="Scripts\Components\Filter\Dropdown.jsx" />
     <Content Include="Scripts\App\api-root-url.js" />
     <Content Include="Scripts\App\api.js" />
     <Content Include="Scripts\App\globals.js" />
     <Content Include="Scripts\App\storage.js" />
-    <Content Include="Scripts\Components\Filter\Dropdown.js" />
-    <Content Include="Scripts\Components\Filter\Test.jsx" />
-    <None Include="Scripts\Components\Filter\TradingState.jsx" />
-    <None Include="Scripts\Components\Filter\TraderDropdownSelectedText.jsx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -177,9 +172,17 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\Components\Filter\FixtureFilter.jsx" />
+    <Content Include="Scripts\Components\Filter\SelectAll.jsx" />
+    <Content Include="Scripts\Components\Filter\TraderDropdownSelectedText - Copy %282%29.jsx" />
+    <Content Include="Scripts\Components\Filter\TraderDropdownSelectedText - Copy %283%29.jsx" />
+    <Content Include="Scripts\Components\Filter\TraderDropdownSelectedText - Copy %284%29.jsx" />
+    <Content Include="Scripts\Components\Filter\TraderDropdownSelectedText - Copy %285%29.jsx" />
+    <Content Include="Scripts\Components\Filter\TradingStateItem.jsx" />
+    <Content Include="Scripts\Components\Filter\TraderItem.jsx" />
+    <None Include="Scripts\Components\FixtureFilter.jsx" />
     <Content Include="Scripts\Actions\stubs\data\traderList.js" />
     <Content Include="Scripts\Actions\stubs\traderStore.js" />
+    <None Include="Scripts\Components\Filter\TraderDropdownSelectedText.jsx" />
     <Content Include="Scripts\config.js" />
     <Content Include="Scripts\Enums\constants.js" />
     <Content Include="Scripts\Enums\enums.js" />
@@ -193,7 +196,6 @@
     <Content Include="Scripts\lib\bootstrap.js" />
     <Content Include="Scripts\lib\bootstrap.min.js" />
     <Content Include="Scripts\lib\dot.js" />
-    <Content Include="Scripts\Components\Filter\TraderDropdown.jsx" />
     <Content Include="Scripts\Components\init.jsx" />
     <None Include="Scripts\lib\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\lib\jquery-1.10.2.js" />

@@ -1,5 +1,17 @@
-﻿define(["react", "jquery", "../../lib/math", "../../app/storage", "../../app/api", "../../app/globals", "../../helpers/eventBus", "../../enums/constants", "../../actions/stubs/traderStore"],
-    function(React, $, math, storage, api, globals, eventBus, constants, traderStore) {
+﻿define(["react",
+    "jquery",
+    "../lib/math",
+    "../app/storage",
+    "../app/api",
+    "../app/globals",
+    "../helpers/eventBus",
+    "../enums/constants",
+    "../actions/stubs/traderStore",
+    "jsx!../Components/Filter/TraderDropdownSelectedText",
+    "jsx!../Components/Filter/SelectAll",
+    "jsx!../Components/Filter/TraderItem",
+    "jsx!../Components/Filter/TradingStateItem"],
+    function(React, $, math, storage, api, globals, eventBus, constants, traderStore, TraderDropdownSelectedText, SelectAll, TraderItem, TradingStateItem) {
         function interceptEvent(event) {
             if (event) {
                 event.preventDefault();
@@ -25,103 +37,6 @@
         };
 
         var loggedInUser = "content";
-
-        var TraderDropDownSelectedText = React.createClass({
-            getInitialState : function () {
-                return {
-                    tradersSelected: this.props.tradersSelected,
-                    tradersTotal: this.props.tradersTotal
-                }
-            },
-            render : function () {
-                var selectedText = (this.props.tradersSelected === 0) ? "No Traders Selected" :
-                    (this.props.tradersSelected === this.props.tradersTotal) ? "All Traders" : this.props.tradersSelected + " of " + this.props.tradersTotal + " Traders Selected";
-
-                return <span>{ selectedText }</span>;
-            }
-        });
-
-        var SelectAll = React.createClass({
-            getInitialState : function() {
-                return {
-                    isAllSelected: this.props.isAllSelected,
-                    traders: this.props.traders
-                }
-            },
-            onChanged : function () {
-                eventBus.publish(constants.onSelectAll, { isChecked : this.props.isAllSelected });
-            },
-            render : function () {
-                if (_.size(this.props.traders) > 0) {
-                    var checkbox = this.props.isAllSelected ?
-                    <input id = "selectAllCheckBox" value = "selectAllCheckbox" type = "checkbox" checked = "checked" onClick = { this.onChanged } /> :
-                    <input id = "selectAllCheckBox" value = "selectAllCheckbox" type = "checkbox" onClick = { this.onChanged } />;
-
-                    return (
-                        <li>
-                            <label className = "checkbox">
-                                <span>{ this.props.isAllSelected ? "Unselect All" : "Select All"}</span>{ checkbox }
-                            </label>
-                        </li>
-                    );
-                } else {
-                    return (
-                        <li>
-                            <span>There are no traders available to select.</span>
-                        </li>
-                    );
-                }
-            }
-        });
-
-        var TraderItem = React.createClass({
-            getInitialState : function() {
-                return {
-                    id: this.props.id,
-                    isChecked: this.props.isChecked,
-                    name: this.props.name,
-                    location: this.props.location
-                }
-            },
-            onChanged : function() {
-                eventBus.publish(constants.onTraderItemSelected, { isChecked: !this.props.isChecked, id: this.props.id, name: this.props.name });
-            },
-            render : function() {
-                var checkbox = this.props.isChecked ?
-                    <input id = "traderCheckBox" value = "traderCheckbox" type = "checkbox" checked = "checked" onClick = { this.onChanged } /> :
-                    <input id = "traderCheckBox" value = "traderCheckbox" type = "checkbox" onClick = { this.onChanged } />;
-             
-                 return (
-                    <li>
-                        <label className="checkbox">
-                            <span>{ this.props.name }{ this.props.location }</span>{ checkbox }
-                        </label>
-                    </li>
-                 );
-            }
-       });
-
-        var TradingStateItem =  React.createClass({
-            getInitialState: function() {
-                return {
-                    id: this.props.id,
-                    name: this.props.name,
-                    isSelected: this.props.isSelected
-                }
-            },
-            onClick : function () {
-                var self = this;
-
-                eventBus.publish(constants.onTradingStateItemSelected, { id : self.state.id });
-            },
-            render : function () {
-                var btnCssClass = this.props.isSelected ? "btn btn-small active" : "btn btn-small";
-
-                return (
-                    <button type = "button" className = { btnCssClass } onClick = { this.onClick }>{ this.props.name }</button>
-                );
-            }
-        });
 
         var fixtureFilterContainer = React.createClass({
             getInitialState : function() {
@@ -327,7 +242,7 @@
                            <div className = {self.state.openCloseString}>
                                 <span className = "add-on">Trader</span>
                                 <button className = "btn btn-small" onClick = { this.toggleOpenClose }>
-                                    <TraderDropDownSelectedText tradersSelected = { _.size(self.state.selectedTraders) } tradersTotal = { _.size(self.state.traders) } />
+                                    <TraderDropdownSelectedText tradersSelected = { _.size(self.state.selectedTraders) } tradersTotal = { _.size(self.state.traders) } />
                                     <span className = "caret" style = {{ marginLeft: 9 + "px" }}></span>
                                 </button>
                                 <ul className = "dropdown-menu" style = {{ width: 350 + "px" }}>

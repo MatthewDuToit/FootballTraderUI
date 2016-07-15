@@ -1,5 +1,5 @@
 ﻿define(
-    ["react", "jsx!../Components/Filter/FixtureFilter"],
+    ["react", "jsx!../Components/FixtureFilter"],
     function(React, FixtureFilter) {
         return React.createClass({
             render: function() {
